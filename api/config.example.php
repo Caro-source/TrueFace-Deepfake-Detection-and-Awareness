@@ -1,6 +1,6 @@
 <?php
 // Database settings.
-// Locally these defaults match XAMPP. Online (Phase 9), Render fills in the
+// Locally these defaults match XAMPP, Render fills in the
 // real values through environment variables, so this file never changes.
 return [
     'host' => getenv('DB_HOST') ?: '127.0.0.1',

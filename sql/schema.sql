@@ -1,4 +1,3 @@
--- Create the database (skip if it already exists)
 CREATE DATABASE IF NOT EXISTS trueface
   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE trueface;

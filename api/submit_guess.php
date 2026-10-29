@@ -36,7 +36,6 @@ $stmt = $db->prepare(
 );
 $stmt->execute([$playerId, $imageId, $roundNumber, $guessedFake, $isCorrect]);
 
-// The model columns stay empty (NULL) until Phase 6
 $modelGuess = $image['model_guess_fake'] === null ? null : (int) $image['model_guess_fake'];
 
 send_json([

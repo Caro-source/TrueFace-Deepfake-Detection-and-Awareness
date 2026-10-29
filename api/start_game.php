@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     send_json(['error' => 'Use POST'], 405);
 }
 
-// Read the JSON the browser sent, e.g. {"nickname":"sharp-eyes"}
+// Read the JSON the browser sent, e.g. {"nickname":"Peter Parker"}
 $body = json_decode(file_get_contents('php://input'), true) ?? [];
 $nickname = trim($body['nickname'] ?? '');
 
