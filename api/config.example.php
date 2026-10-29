@@ -1,0 +1,11 @@
+<?php
+// Database settings.
+// Locally these defaults match XAMPP. Online (Phase 9), Render fills in the
+// real values through environment variables, so this file never changes.
+return [
+    'host' => getenv('DB_HOST') ?: '127.0.0.1',
+    'port' => getenv('DB_PORT') ?: '3306',
+    'name' => getenv('DB_NAME') ?: 'trueface',
+    'user' => getenv('DB_USER') ?: 'root',
+    'pass' => getenv('DB_PASS') ?: '',
+];
