@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detector | TrueFace</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">TrueFace</a>
+    <nav>
+      <a href="detector.html" class="active">Detector</a>
+      <a href="game.html">Beat the AI</a>
+      <a href="stats.html">Stats</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Deepfake Detector</h1>
+    <p class="intro">Upload a face image and our model will estimate how likely it is to be AI-generated. Images are checked and then discarded; we don't store them.</p>
+
+    <div class="grid-2">
+      <section class="card">
+        <h2>1. Upload an image</h2>
+        <input type="file" id="imageInput" accept="image/png, image/jpeg">
+        <img id="preview" class="preview-img hidden" alt="Your uploaded image">
+        <p><button id="analyseBtn" disabled>Analyse image</button></p>
+      </section>
+
+      <section class="card">
+        <h2>2. Result</h2>
+        <div id="result" class="hidden">
+          <p class="score" id="scoreText">--%</p>
+          <p id="labelText">likely AI-generated</p>
+          <img id="heatmap" class="preview-img hidden" alt="Heatmap of where the model looked">
+        </div>
+        <p id="waiting" class="intro">Your result will appear here.</p>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Check it yourself</h2>
+      <p class="intro">Models make mistakes. Look closely at these spots:</p>
+      <ul class="checklist">
+        <li><strong>Eyes and reflections:</strong> do the light reflections in both eyes match?</li>
+        <li><strong>Ears and earrings:</strong> are the ears the same shape, and do the earrings match?</li>
+        <li><strong>Hair edges:</strong> does the hair blur or melt into the background?</li>
+        <li><strong>Teeth:</strong> are they a strange number, or merged into one strip?</li>
+        <li><strong>Background warping:</strong> do straight lines bend near the face?</li>
+        <li><strong>Lighting:</strong> do the shadows on the face match the light in the scene?</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>All faces are AI-generated or from public research datasets.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beat the AI | TrueFace</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">TrueFace</a>
+    <nav>
+      <a href="detector.html">Detector</a>
+      <a href="game.html" class="active">Beat the AI</a>
+      <a href="stats.html">Stats</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Can You Beat the AI?</h1>
+    <p class="intro">Look at each face and decide: real photo or AI-generated? Then see what the AI guessed.</p>
+
+    <!-- Shown before the game starts -->
+    <section class="card" id="startScreen">
+      <label for="nickname">Your nickname</label><br>
+      <input type="text" id="nickname" maxlength="50" placeholder="e.g. sharp-eyes">
+      <p><button id="startBtn">Start game (10 rounds)</button></p>
+    </section>
+
+    <!-- Shown during the game -->
+    <section class="card hidden" id="gameScreen">
+      <div class="scoreboard">
+        <span>Round <span id="roundNum">1</span>/10</span>
+        <span>You: <span id="humanScore">0</span></span>
+        <span>AI: <span id="aiScore">0</span></span>
+      </div>
+
+      <img id="gameImage" class="preview-img" alt="Face to judge">
+
+      <div class="game-buttons" id="guessButtons">
+        <button id="guessReal">Real</button>
+        <button id="guessFake">AI-generated</button>
+      </div>
+
+      <div id="reveal" class="hidden">
+        <p id="revealText"></p>
+        <p id="tipText" class="intro"></p>
+        <button id="nextBtn">Next round</button>
+      </div>
+    </section>
+
+    <!-- Shown at the end -->
+    <section class="card hidden" id="endScreen">
+      <h2>Final score</h2>
+      <p class="scoreboard">You: <span id="finalHuman">0</span>/10 &nbsp; AI: <span id="finalAi">0</span>/10</p>
+      <button id="playAgainBtn">Play again</button>
+      <a class="button" href="stats.html">See the stats</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>All faces are AI-generated or from public research datasets.</p>
+  </footer>
+</body>
+</html>

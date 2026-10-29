@@ -69,3 +69,71 @@ nav a:hover { color: var(--accent); }
   color: var(--muted);
   font-size: 0.9rem;
 }
+/* ---------- Shared page layout ---------- */
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page h1 { margin-top: 0; }
+.page .intro { color: var(--muted); }
+
+.card {
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* Two columns side by side, stacking on phones */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 700px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .site-header { flex-direction: column; gap: 8px; }
+  nav a { margin: 0 10px; }
+}
+
+button {
+  font: inherit;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+button.secondary { background: transparent; color: var(--text); border: 1px solid var(--muted); }
+
+.preview-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+/* Highlights the link for the page you're on */
+nav a.active { color: var(--accent); font-weight: 600; }
+
+/* ---------- Detector ---------- */
+.score { font-size: 2.5rem; font-weight: 700; margin: 8px 0; }
+.checklist li { margin-bottom: 8px; }
+
+/* ---------- Game ---------- */
+.scoreboard { display: flex; gap: 24px; font-size: 1.25rem; font-weight: 600; }
+.game-buttons { display: flex; gap: 16px; margin-top: 16px; }
+.hidden { display: none; }
+
+/* ---------- Stats ---------- */
+.stat-number { font-size: 2rem; font-weight: 700; color: var(--accent); }
