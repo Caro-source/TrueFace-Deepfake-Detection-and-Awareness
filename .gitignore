@@ -1,0 +1,13 @@
+# Database passwords and other secrets
+api/config.php
+.env
+
+# Model files are large; we'll store them elsewhere
+*.h5
+*.pt
+*.keras
+
+# Editor and system clutter
+.vscode/
+.DS_Store
+Thumbs.db
